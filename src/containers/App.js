@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox'
 import Scroll from '../components/Scroll';
+import Header from "../components/Header";
 import ErrorBoundry from '../components/ErrorBoundry';
 import "./App.css"
 
@@ -23,29 +24,29 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class App extends Component {
-  
+
   componentDidMount() {
     this.props.onRequestRobots();
   }
 
   render() {
-    const { searchField, onSearchChange, robots, isPending, error } = this.props;
+    const { searchField, onSearchChange, robots, isPending } = this.props;
     const filteredRobots = robots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchField);
+      return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
-    return isPending ?
-      <h1 className="tc">Loading</h1> :
-      (
-        <div className='tc'>
-          <h1 className="f1">RoboFriends</h1>
-          <SearchBox searchChange={onSearchChange} />
-          <Scroll>
+    return (
+      <div className='tc'>
+        <Header />
+        <SearchBox searchChange={onSearchChange} />
+        <Scroll>
+          {isPending ? <h1 className="tc">Loading</h1> :
             <ErrorBoundry>
               <CardList robots={filteredRobots} />
             </ErrorBoundry>
-          </Scroll>
-        </div>
-      );
+          }
+        </Scroll>
+      </div>
+    );
   }
 }
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Card from './Card';
 
 const CardList = ({ robots }) => {
     const cardComponent = robots.map((robot, index) => {
-        return <Card key={index} id={robots[index].id} name={robots[index].name} email={robots[index].email} />
+        return <Card key={index} id={robot.id} name={robot.name} email={robot.email} />
     })
     return (
         <div>
@@ -12,4 +12,4 @@ const CardList = ({ robots }) => {
     )
 }
 
-export default CardList;
+export default memo(CardList);

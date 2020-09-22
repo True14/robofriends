@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://true14.github.io/robofriends",
+  "homepage": "https://true14.github.io/robofriends",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Scroll Component renders without crashing 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid black",
+      "height": "80vh",
+      "overflowY": "scroll",
+    }
+  }
+/>
+`;

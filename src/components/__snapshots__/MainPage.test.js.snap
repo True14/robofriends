@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MainPage Component should render the main page without crashing 1`] = `
+<div
+  className="tc"
+>
+  <Memo(Header) />
+  <Memo(SearchBox)
+    id="searchField"
+    searchChange={[MockFunction]}
+  />
+  <Scroll>
+    <ErrorBoundry>
+      <Memo(CardList)
+        robots={Array []}
+      />
+    </ErrorBoundry>
+  </Scroll>
+</div>
+`;
+
+exports[`Test MainPage Component should render the main page without crashing when isPending is true 1`] = `
+<div
+  className="tc"
+>
+  <Memo(Header) />
+  <Memo(SearchBox)
+    id="searchField"
+    searchChange={[MockFunction]}
+  />
+  <Scroll>
+    <h1
+      className="tc"
+    >
+      Loading
+    </h1>
+  </Scroll>
+</div>
+`;

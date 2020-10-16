@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The SearchBox component renders withouth crashing 1`] = `
+<div
+  className="pa2"
+>
+  <input
+    aria-label="Search Robots"
+    className="pa3 ba b--green bg-lightest-blue"
+    id="search-box"
+    onChange={[MockFunction]}
+    placeholder="search robots"
+    type="search"
+  />
+</div>
+`;
